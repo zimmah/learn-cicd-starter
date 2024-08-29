@@ -11,7 +11,7 @@ jobs:
     environment: production
     env:
       DATABASE_URL: ${{ secrets.DATABASE_URL }}
-      TEST: $ {{ secrets.TEST }}
+      TEST: ${{ secrets.TEST }}
 
     steps:
       - name: print test
