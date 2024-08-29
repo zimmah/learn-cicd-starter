@@ -10,8 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      TEST: $ {{ secrets.TEST }}
 
     steps:
+      - name: print test
+        run: echo $TEST
+
       - name: Check out code
         uses: actions/checkout@v4
 
